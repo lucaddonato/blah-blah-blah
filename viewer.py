@@ -2,8 +2,8 @@ from flask import Flask, request, send_from_directory, render_template_string
 import os
 from datetime import datetime
 
-app = Flask(_name_)
-SCREENSHOT_FOLDER = os.path.join(os.path.dirname(os.path.abspath(_file_)), 'screenshots')
+app = Flask(__name__)
+SCREENSHOT_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'screenshots')
 os.makedirs(SCREENSHOT_FOLDER, exist_ok=True)
 
 @app.route('/upload', methods=['POST'])
@@ -35,4 +35,4 @@ def index():
 
 @app.route('/img/<path:nome>')
 def serve_img(nome):
-    return send_from_directory(SCREENSHOT_FOLDER, nome)
+    return send_from_directory(SCREENSHOT_FOLDER, nome)
